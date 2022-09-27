@@ -15,17 +15,17 @@ let questions = [
   'What\'s your favourite thing to eat for that meal? ',
   'Which sport is your absolute favourite? ',
   'What is your superpower? In a few words, tell us what you are amazing at! '
-  ];
+];
 
 let answerInput = "";
 
 const askQuestion = (x) => {
-  if(x < questions.length) {
+  if (x < questions.length) {
     rl.question(questions[x], (answer) => {
       answerInput += '\n'+answer;
       askQuestion(x + 1);
     });
-  }else {
+  } else {
     console.log(`The input you have entered:${answerInput}`);
     rl.close();
   }
